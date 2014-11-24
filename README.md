@@ -5,10 +5,13 @@ Application for starting up and shutting down a stack based on a tagging strateg
 
 ## How to build ##
 Install go.
+```
  go get -u github.com/base2Services/go-b2aws
  go get -u github.com/base2Services/go-aws-stack-control
  go build
+```
 Test:
+```
  % ./aws-stack-controller -h
  Usage of ./aws-stack-controller:
    -action="": 'startup' OR 'shutdown' without this, this does nothing
@@ -17,15 +20,17 @@ Test:
    -publicKey="": aws iam publicKey
    -secretKey="": aws iam secretKey
    -stack="": Name of stack to shutdown or startup
+```
 
 ## How to use ##
 Ensure that all your instances are tagged with the following tags:
- Environment
- Stack
- StartOrder
- StopOrder
- Name
+* Environment
+* Stack
+* StartOrder
+* StopOrder
+* Name
 
+Notes:
 * StartOrder and StopOrder are numbers between 1 and N. (Doesn't N doesn't matter as long as it's above 1.)
 * Environment should be one of: Test, UAT, Production, Dev (But not restricted to.)
 * Stack is any name relevant to the stack.
@@ -38,5 +43,7 @@ When using the app, I recommend to create an IAM that can list, start and stop i
 application.
 
 So an example use:
- % ./aws-stack-controller -action="shutdown" -environment="UAT" -publicKey="" -privateKey="" -stack="CMS Stack"
+```
+% ./aws-stack-controller -action="shutdown" -environment="UAT" -publicKey="" -privateKey="" -stack="CMS Stack"
+```
 Would shutdown the UAT CMS Stack.
