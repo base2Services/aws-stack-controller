@@ -18,7 +18,7 @@ Test:
    -secretKey="": aws iam secretKey
    -stack="": Name of stack to shutdown or startup
 
-== How to use ==
+==How to use==
 Ensure that all your instances are tagged with the following tags:
  Environment
  Stack
