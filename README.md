@@ -5,6 +5,8 @@ Application for starting up and shutting down a stack based on a tagging strateg
 
 == How to build ==
 Install go.
+ go get -u github.com/base2Services/go-b2aws
+ go get -u github.com/base2Services/go-aws-stack-control
  go build
 Test:
  % ./aws-stack-controller -h
