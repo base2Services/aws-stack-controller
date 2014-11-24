@@ -3,7 +3,7 @@ aws-stack-controller
 
 Application for starting up and shutting down a stack based on a tagging strategy
 
-== How to build ==
+## How to build ##
 Install go.
  go get -u github.com/base2Services/go-b2aws
  go get -u github.com/base2Services/go-aws-stack-control
@@ -18,7 +18,7 @@ Test:
    -secretKey="": aws iam secretKey
    -stack="": Name of stack to shutdown or startup
 
-==How to use==
+## How to use ##
 Ensure that all your instances are tagged with the following tags:
  Environment
  Stack
